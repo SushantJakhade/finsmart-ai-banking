@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "@/components/layout/MainLayout";
 import Dashboard from "@/pages/Dashboard";
 import FraudDetection from "@/pages/FraudDetection";
-import FraudDashboard from "@/pages/FraudDashboard";
 import SentimentCRM from "@/pages/SentimentCRM";
 import LoanPrediction from "@/pages/LoanPrediction";
 import ModelComparison from "@/pages/ModelComparison";
@@ -26,7 +25,6 @@ const App = () => (
           <Route element={<MainLayout />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/fraud-detection" element={<FraudDetection />} />
-            <Route path="/fraud-dashboard" element={<FraudDashboard />} />
             <Route path="/sentiment-crm/*" element={<SentimentCRM />} />
             <Route path="/loan-prediction" element={<LoanPrediction />} />
             <Route path="/model-comparison" element={<ModelComparison />} />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Activity, Users, ShieldAlert, Cpu, ArrowRight, Landmark, Scan } from "lucide-react";
+import { Activity, Users, ShieldAlert, Cpu, ArrowRight } from "lucide-react";
 import { KPICard } from "@/components/shared/KPICard";
 import { Card, CardHeader, CardTitle } from "@/components/shared/Card";
 import { fetchDashboardSummary, DashboardSummary } from "../api/dashboardApi";
@@ -80,10 +80,10 @@ export default function Dashboard() {
           <div className="flex justify-between items-start gap-2 p-5">
             <div>
               <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                Customer Risk Assessment
+                Fraud Detection
               </p>
               <p className="text-sm text-muted-foreground mt-1">
-                AI-powered risk classification using KYC/POI/POA data
+                Customer risk assessment & transaction fraud detection
               </p>
               <div className="mt-3">
                 <p className="text-xs text-muted-foreground">Flagged Customers</p>
@@ -94,29 +94,6 @@ export default function Dashboard() {
             </div>
             <a
               href="/fraud-detection"
-              className="inline-flex items-center text-xs font-medium text-primary hover:underline"
-            >
-              Open <ArrowRight className="w-3 h-3 ml-1" />
-            </a>
-          </div>
-        </Card>
-
-        <Card className="card-banking">
-          <div className="flex justify-between items-start gap-2 p-5">
-            <div>
-              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                Fraud Detection
-              </p>
-              <p className="text-sm text-muted-foreground mt-1">
-                Transaction fraud detection using Isolation Forest
-              </p>
-              <div className="mt-3">
-                <p className="text-xs text-muted-foreground">Anomaly Detection</p>
-                <p className="text-lg font-semibold">Active</p>
-              </div>
-            </div>
-            <a
-              href="/fraud-dashboard"
               className="inline-flex items-center text-xs font-medium text-primary hover:underline"
             >
               Open <ArrowRight className="w-3 h-3 ml-1" />

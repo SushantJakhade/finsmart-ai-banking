@@ -7,7 +7,6 @@ import {
   FileText,
   X,
   LayoutDashboard,
-  Scan,
   BarChart3,
   Landmark,
 } from "lucide-react";
@@ -20,8 +19,7 @@ interface SidebarProps {
 
 const navItems = [
   { path: "/", label: "Dashboard", icon: LayoutDashboard },
-  { path: "/fraud-detection", label: "Customer Risk Assessment", icon: Shield },
-  { path: "/fraud-dashboard", label: "Fraud Detection", icon: Scan },
+  { path: "/fraud-detection", label: "Fraud Detection", icon: Shield },
   { path: "/loan-prediction", label: "Loan Default Prediction", icon: Landmark },
   { path: "/model-comparison", label: "Model Comparison", icon: BarChart3 },
   { path: "/sentiment-crm", label: "Sentiment Analysis CRM", icon: MessageSquareText },
