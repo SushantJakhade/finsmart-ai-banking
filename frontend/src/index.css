@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 215 90% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 30% 25%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 174 70% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 215 90% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 215 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 215 90% 55%;
+
+    --chart-1: 215 90% 45%;
+    --chart-2: 174 70% 42%;
+    --chart-3: 152 70% 40%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 72% 51%;
+
+    /* Custom banking gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215, 90%, 45%) 0%, hsl(215, 85%, 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(174, 70%, 42%) 0%, hsl(174, 65%, 50%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(220, 20%, 98%) 100%);
+    --gradient-sidebar: linear-gradient(180deg, hsl(220, 25%, 12%) 0%, hsl(220, 28%, 8%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 30% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 30% 15% / 0.08), 0 2px 4px -2px hsl(220 30% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 30% 15% / 0.08), 0 4px 6px -4px hsl(220 30% 15% / 0.05);
+    --shadow-card: 0 1px 3px hsl(220 30% 15% / 0.06), 0 4px 12px hsl(220 30% 15% / 0.04);
+    --shadow-elevated: 0 8px 30px hsl(220 30% 15% / 0.12);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 215 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 220 25% 16%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 174 70% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 215 90% 55%;
+
+    --sidebar-background: 220 28% 6%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 215 90% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 12%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 215 90% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .card-banking {
+    @apply bg-card rounded-xl border border-border/50 shadow-[var(--shadow-card)] transition-all duration-200;
+  }
+
+  .card-banking:hover {
+    @apply shadow-[var(--shadow-elevated)] border-border;
+  }
+
+  .kpi-card {
+    @apply card-banking p-5 relative overflow-hidden;
+  }
+
+  .kpi-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-accent opacity-80;
+  }
+
+  .table-banking {
+    @apply w-full text-sm;
+  }
+
+  .table-banking thead {
+    @apply bg-muted/50;
+  }
+
+  .table-banking th {
+    @apply px-4 py-3 text-left font-medium text-muted-foreground uppercase text-xs tracking-wider;
+  }
+
+  .table-banking td {
+    @apply px-4 py-3 border-b border-border/50;
+  }
+
+  .table-banking tbody tr {
+    @apply transition-colors hover:bg-muted/30 cursor-pointer;
+  }
+
+  .badge-risk-low {
+    @apply bg-success/15 text-success border border-success/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-risk-medium {
+    @apply bg-warning/15 text-warning border border-warning/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-risk-high {
+    @apply bg-destructive/15 text-destructive border border-destructive/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-sentiment-positive {
+    @apply bg-success/15 text-success border border-success/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-sentiment-neutral {
+    @apply bg-muted text-muted-foreground border border-border px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-sentiment-negative {
+    @apply bg-destructive/15 text-destructive border border-destructive/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sidebar-foreground/70 transition-all duration-200 hover:bg-sidebar-accent hover:text-sidebar-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-sidebar-primary/15 text-sidebar-primary font-medium;
+  }
+
+  .input-banking {
+    @apply w-full px-4 py-2.5 rounded-lg border border-input bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+  }
+
+  .btn-banking {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn-banking bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-primary shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply btn-banking bg-secondary text-secondary-foreground hover:bg-secondary/80 focus:ring-secondary;
+  }
+
+  .btn-accent {
+    @apply btn-banking bg-accent text-accent-foreground hover:bg-accent/90 focus:ring-accent shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply btn-banking border border-border bg-transparent text-foreground hover:bg-muted focus:ring-primary;
+  }
+
+  .btn-ghost {
+    @apply btn-banking bg-transparent text-foreground hover:bg-muted focus:ring-primary;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border/50 transition-all duration-200 hover:bg-secondary cursor-pointer;
+  }
+
+  .chip.active {
+    @apply bg-primary/10 text-primary border-primary/30;
+  }
+
+  .chat-bubble {
+    @apply max-w-[80%] px-4 py-3 rounded-2xl;
+  }
+
+  .chat-bubble-user {
+    @apply chat-bubble bg-primary text-primary-foreground rounded-br-md ml-auto;
+  }
+
+  .chat-bubble-bot {
+    @apply chat-bubble bg-card border border-border rounded-bl-md mr-auto;
+  }
+
+  .progress-bar {
+    @apply h-2 rounded-full bg-muted overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.3s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}

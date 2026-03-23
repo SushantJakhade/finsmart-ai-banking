@@ -1,0 +1,268 @@
+{
+  "Card Issues": {
+    "Card Declined at POS": [
+      "declined",
+      "not accepted",
+      "not working",
+      "failed",
+      "swipe"
+    ],
+    "Card Blocked": [
+      "blocked",
+      "block",
+      "frozen"
+    ],
+    "Card Lost/Stolen": [
+      "lost",
+      "stolen",
+      "compromised",
+      "fraud"
+    ],
+    "Card Replacement": [
+      "replacement",
+      "new card",
+      "expired",
+      "damaged",
+      "delivery"
+    ],
+    "Card PIN Issue": [
+      "pin",
+      "cvv",
+      "activate"
+    ],
+    "Card Limit": [
+      "limit",
+      "increase",
+      "insufficient"
+    ],
+    "Card Online Payment": [
+      "online",
+      "virtual",
+      "amazon",
+      "google pay",
+      "add card"
+    ],
+    "Card Charges": [
+      "charges",
+      "duplicate",
+      "wrong amount",
+      "statement"
+    ]
+  },
+  "UPI Failures": {
+    "Failed Transaction - Amount Debited": [
+      "failed",
+      "debited",
+      "deducted",
+      "stuck",
+      "pending"
+    ],
+    "UPI Registration Issue": [
+      "register",
+      "link",
+      "connecting",
+      "invalid"
+    ],
+    "UPI Refund Pending": [
+      "refund",
+      "not returned",
+      "not received"
+    ],
+    "UPI App Issue": [
+      "app",
+      "bhim",
+      "scan",
+      "qr code"
+    ],
+    "UPI Limit Issue": [
+      "limit",
+      "exceeded"
+    ],
+    "UPI Mandate/Autopay": [
+      "mandate",
+      "autopay",
+      "subscription",
+      "emi"
+    ]
+  },
+  "Loan Queries": {
+    "Loan Status Inquiry": [
+      "status",
+      "application",
+      "disbursement",
+      "approval",
+      "rejected"
+    ],
+    "Home Loan Inquiry": [
+      "home loan",
+      "flat",
+      "house",
+      "pmay",
+      "property"
+    ],
+    "Personal Loan Inquiry": [
+      "personal loan",
+      "foreclose",
+      "top up",
+      "pre-approved"
+    ],
+    "Loan EMI Issue": [
+      "emi",
+      "due date",
+      "moratorium",
+      "restructure",
+      "auto debit"
+    ],
+    "Loan Interest/Charges": [
+      "interest rate",
+      "processing fee",
+      "charges",
+      "fixed",
+      "floating"
+    ],
+    "Loan Documents": [
+      "documents",
+      "statement",
+      "noc",
+      "certificate",
+      "tax"
+    ],
+    "Education/Vehicle Loan": [
+      "education",
+      "car",
+      "vehicle",
+      "gold",
+      "business"
+    ]
+  },
+  "KYC": {
+    "KYC Update": [
+      "update",
+      "change",
+      "link",
+      "add",
+      "new"
+    ],
+    "KYC Pending": [
+      "pending",
+      "not completed",
+      "deadline",
+      "last date",
+      "frozen",
+      "restricted"
+    ],
+    "Video KYC": [
+      "video kyc",
+      "appointment",
+      "connecting"
+    ],
+    "eKYC Issue": [
+      "ekyc",
+      "aadhaar",
+      "digilocker",
+      "online"
+    ],
+    "Document Update": [
+      "pan",
+      "aadhaar",
+      "passport",
+      "voter",
+      "driving",
+      "address",
+      "name",
+      "mobile",
+      "email"
+    ]
+  },
+  "Account Issues": {
+    "Account Blocked": [
+      "blocked",
+      "frozen",
+      "lien",
+      "restricted",
+      "access"
+    ],
+    "Account Balance Issue": [
+      "balance",
+      "zero",
+      "missing",
+      "wrong",
+      "incorrect"
+    ],
+    "Net Banking Issue": [
+      "login",
+      "net banking",
+      "otp",
+      "password",
+      "app"
+    ],
+    "Account Charges": [
+      "charges",
+      "minimum balance",
+      "tds",
+      "interest rate"
+    ],
+    "Account Services": [
+      "close",
+      "open",
+      "convert",
+      "joint",
+      "dormant",
+      "activate"
+    ],
+    "Transaction Issue": [
+      "unauthorized",
+      "debit",
+      "credit",
+      "salary",
+      "pension",
+      "standing instruction"
+    ],
+    "Account Documents": [
+      "statement",
+      "passbook",
+      "cheque",
+      "certificate"
+    ]
+  },
+  "General": {
+    "Branch/ATM Inquiry": [
+      "branch",
+      "atm",
+      "timings",
+      "nearest",
+      "holiday"
+    ],
+    "Service Inquiry": [
+      "register",
+      "apply",
+      "cheque book",
+      "locker",
+      "demand draft"
+    ],
+    "Positive Feedback": [
+      "thank",
+      "excellent",
+      "helpful",
+      "appreciate",
+      "easy",
+      "great"
+    ],
+    "General Inquiry": [
+      "general",
+      "query",
+      "ifsc",
+      "swift",
+      "foreign",
+      "nri"
+    ],
+    "Account Products": [
+      "ppf",
+      "rd",
+      "recurring",
+      "sukanya",
+      "senior citizen",
+      "corporate"
+    ]
+  }
+}

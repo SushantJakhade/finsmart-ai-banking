@@ -1,0 +1,42 @@
+# React
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Dotnet
+backend/bin/
+backend/obj/
+backend/.vs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ML model files (too large for git, retrain locally)
+backend/ml/*.joblib
+backend/ml/*.pkl
+backend/ml/sentiment_distilbert/
+backend/ml/issue_distilbert/
+backend/ml/loan_default_dataset.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude/agent config
+.agent/
+.agents/
+.claude/
+
+# Old frontend
+frontend_old/
+
+# Misc
+skills-lock.json
